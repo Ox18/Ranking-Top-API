@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
         gp: gp || 0,
     };
     try {
-        let rank =topObj.rank >= 26 ? topObj : topController.getRank(topObj);
+        let rank =topObj.rank >= 26 ? topObj.rank : topController.getRank(topObj);
         res.status(200).json({
             status: "ok",
             message: "Successful get rank",
